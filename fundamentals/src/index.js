@@ -4,6 +4,10 @@ import ReactDOM from 'react-dom/client';
 // styles
 import './index.css';
 
+const author = 'James Clear';
+const title = 'Atomic Habits';
+const img = './images/book-1.webp';
+
 const BookList = () => {
   return (
     <section className="booklist">
@@ -16,14 +20,9 @@ const BookList = () => {
 };
 
 const Book = () => {
-  const title = 'Atomic Habits';
-  const author = 'James Clear';
   return (
     <article className="book">
-      <img
-        src="https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/I/81wgcld4wxL._AC_UL600_SR600,400_.jpg"
-        alt="Atomic Habits"
-      />
+      <img src={img} alt={title} />
       <h2>{title}</h2>
       <h4 className="author">{author}</h4>
     </article>
