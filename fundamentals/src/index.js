@@ -28,8 +28,6 @@ const BookList = () => {
         author={secondBook.author}
         img={secondBook.img}
       />
-      <Book />
-      <Book />
     </section>
   );
 };
