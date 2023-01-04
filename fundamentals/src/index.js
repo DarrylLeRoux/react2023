@@ -23,11 +23,12 @@ const BookList = () => {
         author={firstBook.author}
         img={firstBook.img}
       >
-        <p>
+        {/* Children rendered between the component  */}
+        {/* <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim impedit
           libero voluptate natus aut eveniet inventore nostrum distinctio ea
           reiciendis.
-        </p>
+        </p> */}
       </Book>
       <Book
         title={secondBook.title}
@@ -44,7 +45,7 @@ const Book = ({ children, img, title, author }) => {
       <img src={img} alt={title} />
       <h2>{title}</h2>
       <h4 className="author">{author}</h4>
-      {children}
+      {/* {children} */}
     </article>
   );
 };
