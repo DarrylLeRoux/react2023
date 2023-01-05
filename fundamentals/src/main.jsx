@@ -20,7 +20,17 @@ const books = [
 const names = ['john', 'peter', 'susan'];
 
 const BookList = () => {
-  return <section className="booklist">{names}</section>;
+  return (
+    <section className="booklist">
+      {names.map((name) => {
+        return (
+          <div>
+            <h1>{name}</h1>
+          </div>
+        );
+      })}
+    </section>
+  );
 };
 
 const Book = ({ children, img, title, author }) => {
