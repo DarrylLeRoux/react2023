@@ -41,6 +41,11 @@ const EventExamples = () => {
     alert(btnClick);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form Submitted');
+  };
+
   return (
     <section>
       <form>
@@ -51,6 +56,9 @@ const EventExamples = () => {
           onChange={handleFormInput}
           style={{ margin: '1rem 0' }}
         />
+        <button type="submit" onClick={handleSubmit}>
+          submit
+        </button>
       </form>
       <button onClick={handleClick}>Click Me</button>
     </section>
