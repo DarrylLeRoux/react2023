@@ -1,3 +1,4 @@
+import e from 'express';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
@@ -40,6 +41,7 @@ const EventExamples = () => {
   const handleClick = () => {
     alert(btnClick);
   };
+
   return (
     <section>
       <form>
