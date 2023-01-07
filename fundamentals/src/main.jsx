@@ -9,12 +9,15 @@ import './index.css';
 
 const BookList = () => {
   return (
-    <section className="booklist">
-      {books.map((book, index) => {
-        // 3. use the displayValue as a prop and pass the function in
-        return <Book {...book} key={book.id} index={index + 1} />;
-      })}
-    </section>
+    <>
+      <h1>Amazon Best Sellers</h1>
+      <section className="booklist">
+        {books.map((book, index) => {
+          // 3. use the displayValue as a prop and pass the function in
+          return <Book {...book} key={book.id} index={index + 1} />;
+        })}
+      </section>
+    </>
   );
 };
 
