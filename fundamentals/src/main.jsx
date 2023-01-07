@@ -20,24 +20,29 @@ const books = [
 ];
 
 const BookList = () => {
+  // 1. prop drilling
+  const someValue = 'shakeAndBake';
+  // 2. pass it into a function to use as a prop to send to the Book component
+  const displayValue = () => {
+    console.log(someValue);
+  };
   return (
     <section className="booklist">
       {books.map((book) => {
-        return <Book {...book} key={book.id} />;
+        // 3. use the displayValue as a prop and pass the function in
+        return <Book {...book} key={book.id} displayValue={displayValue} />;
       })}
     </section>
   );
 };
 
-const Book = ({ img, author, title }) => {
-  const displayTitle = () => {
-    console.log(title);
-  };
+const Book = ({ img, author, title, displayValue }) => {
   return (
     <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
-      <button onClick={displayTitle}>Display Title</button>
+      {/* 4. Book now uses the prop of display value */}
+      <button onClick={displayValue}>Display Title</button>
       <h4 className="author">{author}</h4>
       {/* {children} */}
     </article>
