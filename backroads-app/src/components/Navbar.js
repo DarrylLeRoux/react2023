@@ -1,5 +1,5 @@
 import logo from '../images/logo.svg';
-import { pageLinks } from '../components/data';
+import { pageLinks, socialLinks } from '../components/data';
 
 const Navbar = () => {
   return (
@@ -25,34 +25,19 @@ const Navbar = () => {
           })}
         </ul>
 
+        {/* // Display links for social media icons by mapping over the data  */}
         <ul className='nav-icons'>
-          <li>
-            <a
-              href='https://www.twitter.com'
-              target='_blank'
-              className='nav-icon'
-            >
-              <i className='fab fa-facebook'></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href='https://www.twitter.com'
-              target='_blank'
-              className='nav-icon'
-            >
-              <i className='fab fa-twitter'></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href='https://www.twitter.com'
-              target='_blank'
-              className='nav-icon'
-            >
-              <i className='fab fa-squarespace'></i>
-            </a>
-          </li>
+          {socialLinks.map((link) => {
+            // Destructure the socialLinks from the link
+            const { id, href, icon } = link;
+            return (
+              <li key={id}>
+                <a href={href} target='_blank' className='nav-icon'>
+                  <i className={icon}></i>
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </nav>
