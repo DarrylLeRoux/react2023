@@ -10,3 +10,24 @@ export const socialLinks = [
   { id: 2, href: 'https://www.twitter.com', icon: 'fab fa-twitter' },
   { id: 3, href: 'https://www.squarespace.com', icon: 'fab fa-squarespace' },
 ];
+
+export const services = [
+  {
+    id: 1,
+    icon: 'fas fa-wallet fa-fw',
+    title: 'saving money',
+    text: 'We find the best deals for you to ensure that you do not overspend',
+  },
+  {
+    id: 2,
+    icon: 'fas fa-tree fa-fw',
+    title: 'Endless Hiking',
+    text: 'The routes planned out during your stay provides you with a hiking experience that never ends',
+  },
+  {
+    id: 3,
+    icon: 'fas fa-socks fa-fw',
+    title: 'Amazing Comfort',
+    text: 'Rest easy inside the comfortable rooms with numerous options available',
+  },
+];
