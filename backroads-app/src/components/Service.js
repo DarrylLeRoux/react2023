@@ -1,5 +1,3 @@
-import { services } from '../data';
-
 const Service = ({ title, text, icon }) => {
   return (
     <article className='service'>
