@@ -178,6 +178,7 @@ p {
   align-items: center;
   border-radius: var(--radius);
 }
+
 .item button,
 .item a {
   background: transparent;
