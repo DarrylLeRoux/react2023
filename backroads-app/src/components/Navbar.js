@@ -13,7 +13,7 @@ const Navbar = () => {
             <i className='fas fa-bars'></i>
           </button>
         </div>
-        <PageLinks parentClass='nav-links' itemClass='nav-link' />;
+        <PageLinks parentClass='nav-links' itemClass='nav-link' />
         <ul className='nav-icons'>
           {socialLinks.map((link) => {
             return <SocialLink key={link.id} {...link} itemClass='nav-icon' />;
