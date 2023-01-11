@@ -16,6 +16,7 @@ const UseEffectCleanup = () => {
     return () => {
       console.log('cleanup');
       // Adding the cleanup function prevents memory leaks
+      // This removes the event listener, meaning nothing else happens
       window.removeEventListener('resize', checkSize);
     };
   });
