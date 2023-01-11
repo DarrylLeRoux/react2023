@@ -9,7 +9,8 @@ const UseEffectBasics = () => {
     value === 0
       ? (document.title = `No new messages`)
       : (document.title = `New Messages(${value})`);
-  });
+    // Second arg ([]) makes it run only once.
+  }, [value]); // if you place the value, then it would run everytime the value changes
   console.log('rendered component');
   return (
     <>
